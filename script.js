@@ -5,7 +5,7 @@ let sprite
 let floor 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  new Canvas(windowWidth, windowHeight)
   background(255)
 
   world.gravity.y = 10
@@ -27,9 +27,7 @@ function setup() {
 
 function draw() {
   clear()  
-  const theta = atan2(mouseY-sprite.y, mouseX-sprite.x)
-  sprite.rotation = theta
+  sprite.rotation = atan2(mouseY-sprite.y, mouseX-sprite.x)
 
   if( floor.y < sprite.diameter ) { floor.y = height - 10 }
-  if( floor.y > height - 10 ) { floor.y = height - 10 }
 }
