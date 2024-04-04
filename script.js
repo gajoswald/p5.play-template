@@ -28,7 +28,6 @@ function setup() {
 function draw() {
   clear()  
   const theta = atan2(mouseY-sprite.y, mouseX-sprite.x)
-  console.log( theta )
   sprite.rotation = theta
 
   if( floor.y < sprite.diameter ) { floor.y = height - 10 }
